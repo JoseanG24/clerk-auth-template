@@ -1,10 +1,19 @@
 "use client";
 
 import { SignIn } from "@clerk/nextjs";
+import Link from "next/link";
 
 export default function Page() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-gray-900 p-6">
+      <div className="absolute top-4 left-4">
+        {/* Botón para regresar a la raíz */}
+        <Link href="/">
+          <button className="bg-gray-700 hover:bg-gray-600 text-white font-medium py-2 px-4 rounded-md transition duration-300">
+            Regresar al Inicio
+          </button>
+        </Link>
+      </div>
       <SignIn
         appearance={{
           variables: {
